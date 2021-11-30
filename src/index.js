@@ -2,6 +2,7 @@ import './css/styles.css';
 import debounce from 'lodash.debounce';
 import countryCardTmplt from './templates/country-cards.hbs';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { fetchCountries } from './fetchCountries';
 
 // ------refs------------------
 const refs = {
@@ -20,17 +21,8 @@ function onSearchBoxInput(e) {
   // ----------------------принимаем массив стран и строим разметку----------
   let countryName = e.target.value;
   fetchCountries(countryName).then(renderCountryCard).catch(onSearchError);
-
-  console.log(countryName);
 }
 
-//------получаем страны ----------
-function fetchCountries(countryName) {
-  const url = `https://restcountries.com/v3.1/name/${countryName}?fields=name,capital,population,flags,languages`;
-  return fetch(url).then(response => {
-    return response.json();
-  });
-}
 //-----СТРОИМ РАЗМЕТКУ---------
 function renderCountryCard(country) {
   // console.log(country);
