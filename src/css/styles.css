@@ -40,25 +40,27 @@ img {
   font-weight: 500;
 }
 
-.country-title--card {
+.country-title-card {
   display: flex;
   align-items: flex-end;
   line-height: 1;
   font-weight: 700;
   font-size: 42px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .country-flag {
+  align-items: flex-end;
   width: 50px;
-  height: 40px;
+  height: auto;
   margin-right: 15px;
 }
 
 .country-name {
   margin: 0;
 }
+
 .key {
   font-size: 26px;
   font-weight: 700;
