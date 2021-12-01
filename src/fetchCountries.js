@@ -6,6 +6,7 @@ export function fetchCountries(countryName) {
 
   if (countryName === '') {
     Notify.info('Please type country name');
+    refs.countryCardContainer.innerHTML = '';
     return;
   }
   return fetch(url).then(response => {
