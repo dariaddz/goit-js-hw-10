@@ -8,8 +8,10 @@
 <ul id= "details" class="country-detailed-info">
     <li class="country-capital"><Span class="key">capital: </Span>{{capital}}</li>
     <li class="country-population"><Span class="key">population: </Span>{{population}}</li>
-    {{!-- <li class="country-languages"><Span class="key">languages:</Span>{{#each languages}}
-    {{name}}
-    {{/each}}</li> --}}
+    <li class="country-languages"><Span class="key">languages:</Span>
+{{#each languages}}
+{{this}}
+{{/each}}
+    </li>
 </ul>
 {{/each}}
